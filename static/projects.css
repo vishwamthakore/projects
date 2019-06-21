@@ -1,0 +1,23 @@
+a{
+	/*padding: 5%;*/
+	line-height: 2em;
+	text-transform: uppercase;
+	font-style: italic;
+}
+
+#all{
+	margin-top: 2%;
+	box-shadow: 5px -10px 15px #888;
+	padding: 5%;
+	background-color: white;
+}
+
+body{
+	font-style: italic;
+	background: #eec;
+}
+
+.bold{
+	/*font-weight: 800;*/
+	text-decoration: underline;
+}

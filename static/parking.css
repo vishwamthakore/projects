@@ -1,0 +1,32 @@
+#table-div{
+	display:none;
+}
+
+.div-input{
+	width: 20%;
+	display:inline-block;
+	padding-left: 2%;
+
+}
+
+.z{
+	padding: 0;
+	margin: 0;
+}
+
+.add-div
+{
+	padding: 2%;
+	margin-bottom: 2%;
+	margin-top: 2%;
+
+}
+
+#k1,#k3{
+	text-transform: uppercase;
+}
+
+.lab{
+	text-align: right;
+	font-weight: bold;
+}

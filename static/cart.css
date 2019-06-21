@@ -1,0 +1,25 @@
+#cart{
+	width:75%;
+	margin:auto;
+	margin-top: 5%;
+	padding: 4%;
+	padding-top: 2%;
+	border:1px solid #aaa;
+	border-radius: 1%;
+}
+table{
+	width:100%;
+}
+
+th, td {
+  padding: 2%;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+
+}
+
+.col_1{
+	width: 35%;
+	
+}
+

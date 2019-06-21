@@ -1,0 +1,31 @@
+#a,#b,#c,#d,#e,#f,#g,#h,#am,#bm,#cm,#dm,#em,#fm,#gm,#hm,#im,#jm,#km,#lm,#ah,#bh,#ch,#dh,#eh,#fh,#gh,#hh,#ih,#jh,#kh,#lh,#mh,#nh,#oh,#ph{
+   display:inline-block;
+   width:20%;
+   border: 1px solid #ccc;
+   padding:5%;
+   background:#eed;
+   position:sticky;
+   
+}
+#x{
+   display:none;
+}
+
+.easy, .medium, .hard{
+   display:none;
+}
+body{
+	/*font-style: italic;*/
+	background: #eec;
+}
+#board{
+	margin-top: 2%;
+	box-shadow: 5px -10px 15px #888;
+	padding: 5%;
+	background-color: white;
+}
+
+#instructions{
+   border: 1px solid #ddd;
+   border-radius: 2px;
+}
