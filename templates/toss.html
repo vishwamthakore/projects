@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Toss</h1>
+
+<img id="w" src="https://www.cardboardboxes4u.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/l/a/large_moving_box_1.jpg" height="100px" width="150px">
+
+
+<h2 id="t">Pick One</h2>
+
+<button id='a' onclick="toss(this.id)">Alive</button>
+<button id='d' onclick="toss(this.id)">Dead</button>
+
+<script>
+
+function toss(pick)
+{
+var n= Math.ceil(Math.random() * 2);
+
+if(pick=="a" && n==1)
+{
+document.querySelector("#w").setAttribute("src", "http://www.petsworld.in/blog/wp-content/uploads/2014/09/cat.jpg");
+document.querySelector("#w").setAttribute("width", "100px");
+
+
+document.querySelector("#t").innerHTML="Cat's Alive. You Win."
+
+
+}
+if(pick=="a" && n==2)
+{
+document.querySelector("#w").setAttribute("src", "https://cdn.pixabay.com/photo/2015/08/25/10/49/beretta-906612__340.png");
+document.querySelector("#w").setAttribute("width", "150px");
+
+document.querySelector("#t").innerHTML="Cat's Dead. You Lose."
+}
+if(pick=="d" && n==1)
+{
+document.querySelector("#w").setAttribute("src", "http://www.petsworld.in/blog/wp-content/uploads/2014/09/cat.jpg");
+document.querySelector("#w").setAttribute("width", "100px");
+
+document.querySelector("#t").innerHTML="Cat's Alive. You Lose."
+}
+if(pick=="d" && n==2)
+{
+document.querySelector("#w").setAttribute("src", "https://cdn.pixabay.com/photo/2015/08/25/10/49/beretta-906612__340.png");
+document.querySelector("#w").setAttribute("width", "150px");
+
+document.querySelector("#t").innerHTML="Cat's Dead. You win."
+}
+
+
+
+
+
+}
+</script>
+
+</body>
+</html>
+

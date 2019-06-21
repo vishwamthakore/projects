@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+	<title>
+		Fibonacci Series App
+	</title>
+	<style type="text/css">
+		.ridge {border-style: ridge;}
+		.center {
+					  margin: auto;
+					  width: 50%;
+					  border: 3px solid #73AD21;
+					  padding: 20px;
+
+					}
+
+		a:link, a:visited {
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-right: 2px solid lightgrey;
+  /*border-style: ridge;
+  border-color: lightgrey;*/
+}
+
+a:hover, a:active {
+  background-color: lightgrey;
+}
+	</style>
+</head>
+<body>
+	<div class='container'>
+
+	<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- <nav class="navbar navbar-default navbar-fixed-top">
+    <p>test </p> 
+    </nav> -->
+    <h1>
+    	Fibonacci Series App
+    </h1>
+    <hr>
+    <p>Given the first and second term, a unique Fibonacci Sequence will be generated. The value of Nth term of any such sequence can be found by using the below app.</p>
+
+    <a href="/FibonacciApp">App</a>
+    <a href="/AboutFibonacci">Description</a>
+
+
+    {% block content %}
+
+
+    <br><br><br>
+    <div class="center">
+	<form action="/FibonacciApp" method="POST">
+  	<label>Change First Term: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label> 
+  	<input type="number" name="first" min="0" max="10000" value="0">
+  	<br><br>
+  	<label>Change Second Term: &nbsp;</label>
+  	<input type="number" name="second" min="0" max="10000" value="1">
+  	<br><br>
+
+  	<label>Enter N to get Nth term of Fibonacci Series :</label>
+  	<input type="number" name="quantity" min="1" max="10000" value={{n_value}}>
+  	<br><br>
+
+    <button type="submit"> Find Nth term </button>
+	</form>
+
+	
+
+<h3>Answer : {{ ans }} </h3>
+
+</div>
+
+{% endblock %}
+<!-- <p>
+{% for i in ans_list %}
+
+{{ ans_list[i] }} &nbsp;
+
+{% endfor %}
+</p> -->
+
+</div>
+</body>
+</html>

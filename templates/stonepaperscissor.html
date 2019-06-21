@@ -1,0 +1,150 @@
+{% extends "index.html" %}
+{% block title %}
+<title>Stone Paper Scissor</title>
+
+<style>
+
+#demo{
+	padding:2%;
+	text-align: center;
+
+}
+
+#you,#comp{
+	border:1px solid #eee;
+	/*border-radius: 10%;*/
+	padding: 2%;
+	text-align: center;
+
+}
+h2{
+	padding:8px;
+}
+q_img, y_img{
+	margin-top:5%; 
+}
+
+#ans{
+	color: #2a6;
+	text-align: center;
+}
+#option{
+	font-size: 20px;
+	padding: 5%;
+}
+</style>
+
+{% endblock %}
+
+
+{% block body %}
+
+<div>
+<h1 id="demo">Stone Paper Scissor</h1>
+</div>
+
+<div class="row">
+<div class="col-md-6" id="you">
+
+<h2>You</h2>
+<img id="y_img" height="150px" width="150px">
+<div id="option">
+<span>Choose your option : </span>
+<button id="stone" class="btn btn-primary" onclick="stone(this.id)">Stone</button>
+<button  id="paper" class="btn btn-success" onclick="stone(this.id)">Paper</button>
+<button id="scissor" class="btn btn-info" onclick="stone(this.id)">Scissor</button>
+</div>
+</div>
+
+
+
+<div class="col-md-6" id="comp">
+<h2>Computer</h2>
+
+<img id="q_img" height="150px" width="150px">
+<br>
+</br>
+</div>
+</div>
+
+<h2 id=ans>Result : </h2>
+
+
+
+
+<script>
+
+
+function stone(q)
+{
+
+if (q=="stone")
+{
+document.querySelector("#y_img").setAttribute("src",'https://rtpr.com/sites/default/files/books/hand-exercises-reduce-arthritis-fist.jpg' );
+}
+if (q=="paper")
+{
+document.querySelector("#y_img").setAttribute("src",'https://t4.ftcdn.net/jpg/01/39/30/31/500_F_139303181_eqVBAAHBq1wiX3WYOksnwUovK7rlSe9x.jpg' );
+}
+
+if (q=="scissor")
+{
+document.querySelector("#y_img").setAttribute("src",'https://www.colourbox.com/preview/2776098-hand-showing-victory-sign-or-counting-two-isolated-on-white-background.jpg' );
+}
+
+
+var n= Math.ceil(Math.random() * 3);
+
+if (n==1)
+{
+document.querySelector("#q_img").setAttribute("src",'https://rtpr.com/sites/default/files/books/hand-exercises-reduce-arthritis-fist.jpg' );
+}
+
+if (n==2)
+{
+document.querySelector("#q_img").setAttribute("src",'https://t4.ftcdn.net/jpg/01/39/30/31/500_F_139303181_eqVBAAHBq1wiX3WYOksnwUovK7rlSe9x.jpg' );
+
+}
+if (n==3)
+{
+document.querySelector("#q_img").setAttribute("src",'https://www.colourbox.com/preview/2776098-hand-showing-victory-sign-or-counting-two-isolated-on-white-background.jpg' );
+}
+
+if(q=="stone" && n==3)
+{
+	document.querySelector("#ans").innerHTML="Result : You Win";
+}
+if(q=="paper" && n==1)
+{
+	document.querySelector("#ans").innerHTML="Result : You Win";
+}
+if(q=="scissor" && n==2)
+{
+	document.querySelector("#ans").innerHTML="Result : You Win";
+}
+
+if(q=="stone" && n==2)
+{
+	document.querySelector("#ans").innerHTML="Result : Computer Wins";
+}
+if(q=="paper" && n==3)
+{
+	document.querySelector("#ans").innerHTML="Result : Computer Wins";
+}
+if(q=="scissor" && n==1)
+{
+	document.querySelector("#ans").innerHTML="Result : Computer Wins";
+}
+
+if((q=="stone" && n==1)||(q=="paper" && n==2)||(q=="scissor" && n==3))
+{
+document.querySelector("#ans").innerHTML="Result : Draw";
+}
+
+
+
+}
+
+</script>
+
+{% endblock %}

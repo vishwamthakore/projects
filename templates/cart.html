@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shopping Cart</title>
+	<link rel="stylesheet" type="text/css" href="/static/cart.css">
+</head>
+<body>
+<div id="cart">
+<h1>Shopping Cart</h1>
+<table id="tab">
+	<thead>
+	  <tr>
+	    <th class="col_1"> Description </th>
+	    <th> Qtty </th>
+	    <th> Cost </th>
+	    <th> Total </th>
+	    <th> Total(with tax) </th>
+	    <th> __ </th>
+	  </tr>
+	  </thead>
+
+
+	  
+	  <tr>
+	    <td id="first">Milk</td>
+	    <td> 1 </td>
+	    <td> 5 </td>
+	    <td> 5 </td>
+	    <td> 5.5 </td>
+	    <td class="last">[X]</td>
+	  </tr>
+
+	  <tr>
+	    <td>Book 2</td>
+	    <td> 1 </td>
+	    <td> 10 </td>
+	    <td> 10 </td>
+	    <td> 11 </td>
+	    <td class="last">[X]</td>
+	  </tr>
+	  
+
+
+
+</table>
+
+
+<p id="sum">Cart Total : <span id="sum_val">16.5</span></p>
+
+<hr>
+
+<select name="cars" size="1" id="to_add">
+  <option value="Book 1">Book 1</option>
+  <option value="Book 2">Book 2</option>
+  <option value="Music Cd">Music CD</option>
+  <option value="Small Chocolate">Small Chocolate</option>
+  <option value="Big Chocolate">Big Chocolate</option>
+  <option value="Headache Pills">Headache Pills</option>
+  <option value="Cold Syrup">Cold Syrup</option>
+  <option value="Mobile Phone">Mobile Phone</option>
+  <option value="Laptop">Laptop</option>
+  <option value="Perfume">Perfume</option>
+  
+</select>
+
+<button id="add_btn">Add Item</button>
+
+<!--  Book 1 ($10)
+* Book 2 ($15)
+* Music CD ($20)
+* Small Chocolate ($5)
+* Big Chocolate ($12)
+* Headache Pills ($5)
+* Cold Syrup ($15)
+* Mobile Phone ($100)
+* Laptop ($450)
+* Perfume ($35)
+ -->
+
+
+</div>
+
+<script type="text/javascript" src="/static/cart.js"></script>
+</body>
+</html>
